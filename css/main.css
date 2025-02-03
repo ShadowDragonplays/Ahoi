@@ -1,0 +1,672 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(159, 226, 91);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(40, 228, 225);
+  border-radius: 10px;
+  box-shadow: 0 0 10px inset rgb(54, 54, 54);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+  /* color: black;
+  background-color: black; */
+}
+/* ::webkit-scrollbar:hover{
+    background: black;
+   } */
+/* ::-webkit-scrollbar-track:hover{ 
+    background: black;
+   } */
+/* ::-webkit-scrollbar-button:hover{
+    background: black;
+   } */
+
+/* Scroll Bar End */
+
+/* main nav bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+#ul-main {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  border-bottom: 0.2px solid rgb(65, 62, 62);
+  border-radius: 4rem;
+  box-shadow: 3px 3px 3px 3px grey;
+}
+
+#ul-main li {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* font-weight: bold; */
+}
+
+#ul-main a {
+  text-decoration: none;
+  color: black;
+  padding: 12px;
+  font-size: 18px;
+}
+/* navigation link hover */
+.NavlinkHover a:hover {
+  background-color: #bebebe;
+}
+
+/* Other Elements Of Navbar */
+
+/* Dropdowns */
+.dropbtn {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-bottom: 11px;
+  /* padding-bottom: 10px; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* font-weight: bold; */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown-nav-main {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-top: 18px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-width: 100%;
+  /* height: 30vh; */
+  width: 400px;
+  margin-top: 5%;
+  /* border-top: 0.2px solid  rgb(124, 124, 124); */
+  font-size: 7px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 0 10px 34px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown-nav-main:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown-nav-main:hover .dropbtn {
+  background-color: #bebebe;
+}
+input[type="text"] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type="text"]:focus {
+  width: 10%;
+}
+/* Dark mode switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #60f321;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #60f321;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* .dark-mode {
+    background-color: rgb(46, 46, 46);
+    color: white;
+  } */
+/* Nav bar css ends */
+
+/* Body Content */
+/* FlexBox1 */
+.FlexBox1 {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.FlexBox1 h1 {
+  /* color: black; */
+  font-size: 50px;
+}
+.FlexBox1 h2 {
+  /* color: black; */
+  font-size: 40px;
+}
+/* FlexBox2 */
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* footer  */
+.footer-basic {
+  padding: 0px 0;
+  background-color: #ffffff;
+  color: #4b4c4d;
+}
+
+.footer-basic ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-basic li {
+  padding: 0 10px;
+}
+
+.footer-basic ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity: 1;
+}
+
+.footer-basic .social {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-basic .social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity: 0.9;
+}
+
+.footer-basic .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
+}
+
+/* Responsive Grid
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.Grid {
+  display: -ms-flexbox;  IE10 
+  display: flex;
+  -ms-flex-wrap: wrap;  IE10 
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other 
+.columnGrid {
+  -ms-flex: 25%;  IE10 
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.columnGrid img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns 
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other 
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}  */
+.dark-mode {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  .contentRight {
+    background-color: rgb(0, 0, 0);
+  }
+  h1 {
+    color: white;
+  }
+  .slideshow-container-left .text {
+    color: rgb(255, 255, 255);
+  }
+  .text {
+    color: #ffffff;
+  }
+  .numbertext {
+    color: #ffffff;
+  }
+}
+/* Image Grid */
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.header {
+  text-align: center;
+  padding: 32px;
+}
+.Grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other  */
+.columnGrid {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.columnGrid img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.GridImages {
+  width: 100%;
+}
+a .GridImages:hover {
+  width: 105%;
+}
+/* /* Responsive layout - makes a two column-layout instead of four columns  */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* /* Responsive layout - makes the two columns stack on top of each other instead of next to each other  */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/* Slider With right content */
+.mainContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+.mySlides-left {
+  display: none;
+}
+.SideImg {
+  vertical-align: middle;
+  max-width: 500px;
+  max-height: 600px;
+  
+}
+
+/* Slideshow container */
+.slideshow-container-left {
+  max-width: 400px;
+  max-height: 600px;
+  position: relative;
+  /* object-fit: cover; */
+
+  /* margin: auto; */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #020202;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+/* The dots/bullets/indicators */
+.WeirdAndRound {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.WeirdAndRound:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+.slideshow-container-left::after {
+  display: inline-block;
+}
+.slideshow-container-left .text {
+  color: black;
+}
+.sideElements {
+  margin-left: 30px;
+}
+/* Center website */
+.RightMain {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.RowRight {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.RowRight,
+.RowRight > .columnRight {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.columnRight {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */
+.RowRight:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.contentRight {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .columnRight {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .contentRight {
+    width: 100%;
+  }
+}

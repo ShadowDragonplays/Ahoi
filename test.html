@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="slideshow-container-left">
+        <hr />
+        <div class="mySlides-left fade">
+          <div class="numbertext">1 / 4</div>
+          <img
+            src="/images/sliderimg2/Amazingart.jpg"
+            style="width: 100%"
+            class="SideImg"
+          />
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides-left fade">
+          <div class="numbertext">2 / 4</div>
+          <img
+            src="/images/sliderimg2/horizontalimg2.webp"
+            style="width: 100%"
+            class="SideImg"
+          />
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides-left fade">
+          <div class="numbertext">3 / 4</div>
+          <img
+            src="/images/sliderimg2/horizontalimg3.avif"
+            style="width: 100%"
+            class="SideImg"
+          />
+          <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides-left fade">
+          <div class="numbertext">4 / 4</div>
+          <img
+            src="/images/sliderimg2/horizontalimg4avif.avif"
+            style="width: 100%"
+            class="SideImg"
+          />
+          <div class="text">Caption Four</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        <div style="text-align: center; margin-top: 20px">
+          <span class="WeirdAndRound" onclick="currentSlide(1)"></span>
+          <span class="WeirdAndRound" onclick="currentSlide(2)"></span>
+          <span class="WeirdAndRound" onclick="currentSlide(3)"></span>
+          <span class="WeirdAndRound" onclick="currentSlide(4)"></span>
+        </div>
+        <hr />
+      </div>
+      <div class="sideElements">
+        <hr />
+        <!-- MAIN (Center website) -->
+        <div class="RightMain">
+          <!-- Portfolio Gallery Grid -->
+          <div class="RowRight">
+            <div class="columnRight">
+              <div class="contentRight">
+                <img
+                  src="/images/Slideshow2images/ajmer-gov-museum.jpg"
+                  alt="Mountains"
+                  style="width: 100%"
+                />
+                <h3>My Work</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, tempor prodesset eos no.
+                  Temporibus necessitatibus sea ei, at tantas oporteat nam.
+                  Lorem ipsum dolor sit amet, tempor prodesset eos no.
+                </p>
+              </div>
+            </div>
+            <div class="columnRight">
+              <div class="contentRight">
+                <img
+                  src="/images/Slideshow2images/soham.jpg"
+                  alt="Lights"
+                  style="width: 100%"
+                />
+                <h3>My Work</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, tempor prodesset eos no.
+                  Temporibus necessitatibus sea ei, at tantas oporteat nam.
+                  Lorem ipsum dolor sit amet, tempor prodesset eos no.
+                </p>
+              </div>
+            </div>
+            <div class="columnRight">
+              <div class="contentRight">
+                <img
+                  src="/images/Slideshow2images/Subhir raha art museum.jpg"
+                  alt="Nature"
+                  style="width: 100%"
+                />
+                <h3>My Work</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, tempor prodesset eos no.
+                  Temporibus necessitatibus sea ei, at tantas oporteat nam.
+                  Lorem ipsum dolor sit amet, tempor prodesset eos no.
+                </p>
+              </div>
+            </div>
+            <div class="columnRight">
+              <div class="contentRight">
+                <img
+                  src="/images/Slideshow2images/Science City.jpg"
+                  alt="Mountains"
+                  style="width: 100%"
+                />
+                <h3>My Work</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, tempor prodesset eos no.
+                  Temporibus necessitatibus sea ei, at tantas oporteat nam.
+                  Lorem ipsum dolor sit amet, tempor prodesset eos no.
+                </p>
+              </div>
+            </div>
+            <!-- END GRID -->
+          </div>
+
+          <div class="contentRight">
+            <img
+              src="/images/Slidebarimg/art.jpg"
+              alt="Bear"
+              style="width: 100%"
+            />
+            <h3>Some Other Work</h3>
+            <p>
+              Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus
+              necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor
+              sit amet, tempor prodesset eos no.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus
+              necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor
+              sit amet, tempor prodesset eos no.
+            </p>
+          </div>
+          <hr />
+
+          <!-- END MAIN -->
+        </div>
+      </div>
+    </div>
+
+    <!-- <br /> -->
+
+    <!-- <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div> -->
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides-left");
+        let dots = document.getElementsByClassName("WeirdAndRound");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>

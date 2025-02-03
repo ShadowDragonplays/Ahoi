@@ -1,0 +1,656 @@
+<html>
+  <head>
+    <!--Font Awesome CDN-->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="westWeb.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- <script src="script.js" defer></script> -->
+    <link
+      rel="shortcut icon"
+      href="/images/Default Images/WhatsApp Image 2024-03-14 at 04.46.04_3b52f66a.jpg"
+      type="image/x-icon"
+    />
+    <title>Ahoi:Museums In West</title>
+  </head>
+  <body>
+    <nav id="navbar-main">
+      <ul id="ul-main">
+        <li id="main-logo">
+          <a href=""
+            ><img
+              src="/images/Default Images/WhatsApp_Image_2024-03-14_at_01.45.25_816acbda-removebg-preview.png"
+              alt="main-logo-Ahoi"
+              style="height: 10vh; width: 200px"
+          /></a>
+        </li>
+        <li id="ul-main-li-2" class="NavlinkHover">
+          <a href="/index.html">Home</a>
+        </li>
+        <li id="ul-main-li-3" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">
+              <a
+                href="/SideWebsites/Exhibition wepage/Exhibitions.html"
+                target="_blank"
+                >Exhibitions</a
+              >
+            </button>
+            <!-- <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div> -->
+          </div>
+        </li>
+        <li id="ul-main-li-4" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">
+              <a href="/SideWebsites/Collection/Collection.html" target="_blank"
+                >Collection</a
+              >
+            </button>
+            <div class="dropdown-content">
+              <a href="/SideWebsites/north/North.html" target="_blank"
+                >North Museums</a
+              >
+              <a href="/SideWebsites/South museum/SoutWeb.html" target="_blank"
+                >South Museums</a
+              >
+              <a
+                href="/SideWebsites/East Museum/EastMuseum.html"
+                target="_blank"
+                >East Museums</a
+              >
+              <a href="/SideWebsites/west museum/westWeb.html" target="_self"
+                >West Museums</a
+              >
+            </div>
+          </div>
+        </li>
+        <!-- <li id="ul-main-li-5" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">Events</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </li> -->
+        <li id="ul-main-li-6" class="NavlinkHover">
+          <a href="#" onclick="Coming_Soon()">Virtual Tour</a>
+        </li>
+        <li id="ul-main-li-7" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">Shop</button>
+            <div class="dropdown-content">
+              <a href="/SideWebsites/shop ahoi/shop.html" target="_blank"
+                >Official Art For Sale
+              </a>
+              <!-- <a href="#">Listed Art & Scuptures</a> -->
+              <a href="">List Your Art </a>
+            </div>
+          </div>
+        </li>
+        <li id="ul-main-li-8" class="NavlinkHover">
+          <a href="/SideWebsites/Contactus.html" target="_blank">Contact Us</a>
+        </li>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search.."
+          class="search_bar"
+        />
+        <label class="switch">
+          <input type="checkbox" onclick="ThemeToggle()" />
+          <span class="slider round"> </span>
+        </label>
+      </ul>
+    </nav>
+
+    <!-- Rest of your code goes here -->
+    <div class="container">
+      <div class="slide">
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg)"
+        >
+          <div class="content">
+            <div class="name">Art Gallery</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg)"
+        >
+          <div class="content">
+            <div class="name">Museums</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg)"
+        >
+          <div class="content">
+            <div class="name">North India</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg)"
+        >
+          <div class="content">
+            <div class="name">East India</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg)"
+        >
+          <div class="content">
+            <div class="name">West India</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+            </div>
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg)"
+        >
+          <div class="content">
+            <div class="name">South India</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+            </div>
+            <button>See More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- part 2  -->
+    <div id="region">
+      <h1>Explore Art gallery and Museums of West India</h1>
+      <!-- <hr> -->
+      <div id="flip-card">
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.Ureq8rIdnyZHttFSO5SxhAHaEI&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span>
+              <h2>Chhatrapati Shivaji Maharaj Vastu Sangrahalaya</h2>
+              <p>
+                It was founded during British rule of India in the early years
+                of the 20th century by prominent citizens of the city then
+                called Bombay, with the help of the government, to commemorate
+                the visit of the Prince of Wales (later George V, king of the
+                United Kingdom and emperor of India). It is located in the heart
+                of South Mumbai near the Gateway of India. The museum was
+                renamed in 1998 after Chhatrapati Shivaji Maharaj, the founder
+                of the Maratha Empire.
+              </p>
+            </span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/d7/76/cb/caption.jpg?w=600&h=600&s=1"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Raja Dinkar Kelkar Museum</h2>
+              <p>
+                The collection was started around 1920, and by 1960 it contained
+                around 15,000 objects. The museum was established in 1962, and
+                Dr. Kelkar donated his collection to the Government of
+                Maharashtra in 1975.The museum now holds over 20,000 objects of
+                which 2,500 are kept on display. These consist of mainly Indian
+                decorative items from everyday life and other art objects,
+                mostly from the 18th and 19th centuries. The museum's collection
+                depicts the skills of the Indian artists of the time, including
+                the prominent works of Pandit Abhijeet Joshi.During the COVID-19
+                pandemic in India, the museum offered a virtual tour.[7]
+              </p></span
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://www.fabhotels.com/blog/wp-content/uploads/2019/04/Nehru-Planetarium.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Nehru Planetarium</h2>
+              <p>
+                The Nehru Planetarium has been built as a part of the Nehru
+                Centre that was constructed in 1972. It was set up as a centre
+                for the study of science and humanity. The focus has been on the
+                promotion of edutainment – education along with
+                entertainment.The planetarium was inaugurated 5 years later, on
+                March 3, 1977. And over the years, the Nehru Planetarium and
+                Nehru Centre have become a preferred destination for eminent
+                astronomy scientists, researchers and others who study planets
+                and all the motion above the sky. Science quiz contests,
+                astronomy-themed painting competitions and debates are also
+                organised here.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://globalprimenews.com/wp-content/uploads/2022/09/IMG-20220904-WA0014-777x437.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Siddhagiri Museum</h2>
+              <p>
+                This museum showcases different aspects of Gramjivan (village
+                life). Gram means village and jeevan means life in the Marathi
+                language. This initiative was the dream of Mahatma Gandhi, and
+                was created through the vision and efforts of Siddhagiri Gurukul
+                Foundation co. The history of self-sufficient village life in
+                Maharshtra, before the invasion of the Mughals, is depicted in
+                the form of cement sculptures. Each sculpture is lifelike and
+                represents activities performed in daily village life. There
+                were 12 Balutedars (essentially artisan castes), and 18
+                Alutedars who provided equipment to carry out domestic and
+                professional tasks.The museum is spread over 7 acres (28,000
+                m2), and the surrounding countryside is beautiful, with lush
+                greenery. Every aspect of village life has been depicted in
+                almost 80 scenes that showcase more than 300 statues.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://im.whatshot.in/img/2019/Nov/img-20191118-110849-cropped-1574069013.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>National War Museum</h2>
+              <p>
+                The National War Museum in Pune, India, stands as a testament to
+                the bravery and sacrifice of Indian soldiers who lost their
+                lives defending their nation. Inaugurated in 1997, the museum
+                was erected as a result of citizens' efforts, reflecting the
+                public's desire to honor fallen heroes. This grand establishment
+                covers a vast area and includes a 25-meter-high pillar. Located
+                in the cantonment area of Pune, it's surrounded by
+                well-maintained greenery that contributes to the serenity of the
+                place.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.Zw6lQP-oFkf3C7_j-diGaQHaE4&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Gargoti Mineral Museum</h2>
+              <p>
+                The 1st Museum in “Sinnar, Nasik” came to existence in April
+                2001; it was named “Gargoti The Mineral Museum” Inaugurated by
+                the Hands of Hon.Late Shri. Balasaheb Thackery ji, Gargoti soon
+                emerged as a key tourist destination in the state & has marked
+                Nasik as the epicenter of Indian Zeolite Minerals in global
+                mineral map. Gargoti Museum displays the personal collection of
+                Connoisseur Mr.K.C.Pandey which the result of his consistency
+                since past 40 years.
+              </p></span
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://www.totalsafari.com/upload/travel-destinations/870-442/indian-army-regiment-of-artillery-museum-nashik-deolali-gaon-maharashtra.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Artilery Museum</h2>
+              <p>
+                The Artillery Museum in Deolali Gaon, Nashik was established by
+                The Regiment of Artillery Association (RAA) and opened to the
+                public on 16 January, 2005. The Museum is Asia's biggest
+                artillery museum.The Artillery Centre Museum premises used to be
+                a military centre for British-Indian forces during World War II,
+                but now a part of it has been converted into a museum, while the
+                other part is a training ground for Indian soldiers. The Museum
+                is located in the Gandhi Nagar Airport Area on the picturesque
+                foothills of the Sahyadri Mountain Range. Curated by Subedar
+                Jitendra Singh (Rtd.), the Museum spreads across two floors and
+                features an array of weapons and aircraft. On display in the
+                Artillery Museum are a number of vintage and modern weapons
+                including army tanks, radar systems, and aircrafts placed on the
+                open gardens which draw visitors in large numbers.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://th.bing.com/th/id/OIP.bJzy5XJyKF-62zeh-7cfWAHaD_?rs=1&pid=ImgDetMain"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>National Mueseum of Indian Cinema</h2>
+              <p>
+                Inaugurated in 2019, this museum is under the Ministry of
+                Information & Broadcasting, Government of India. It is housed in
+                two buildings, the heritage Gulshan Mahal and the New Museum
+                Building. This museum showcases history of Indian cinema through
+                recordings, memorabilia, cameras, equipment etc. It is visited
+                by locals and foreign tourists.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.iF6bf2R2JQuVPD1M5VrPvQHaFM&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Monetary Museum</h2>
+              <p>
+                RBI Monetary Museum or Reserve Bank of India Monetary Museum is
+                a museum in Fort, Mumbai that covers the evolution of money in
+                India, from the earliest barter system and the use of cowries to
+                paper money, coins, stock markets and modern-day electronic
+                transactions.The museum was established under the educational
+                programme by the Reserve Bank of India, India's central bank, in
+                2004 and was inaugurated by A. P. J. Abdul Kalam, the then
+                President of India. It was the first museum in the country
+                devoted to economic history and numismatics.The collection,
+                divided into six sections, has about 1,500 objects that include
+                coins dating back to 6th-century BCE and from Indus Valley, the
+                Kushana Empire, the Gupta period and the British Raj; ancient
+                paper money from across India, China and Southeast Asia;
+                financial instruments; and other interactive exhibits.Entry to
+                the museum is free.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.lxnKVbf8YgM6Wwt419PgiwHaCs&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>kite Museum</h2>
+              <p>
+                Kite Museum is a beguiling sightseeing spot of the city that
+                displays around 125 kites. The Kite Museum gives an enticing
+                experience especially to children. Also known as Patang Kite
+                Museum, the small museum is dedicated to kites and kite flyers.
+                It holds kites from the ancient times till the modern period.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://3.bp.blogspot.com/-tj0UTsVpg-Y/WvUJX-SOKAI/AAAAAAAAars/k994as_AGc03oJ0prtTzCIsEkaeXBzBMQCLcBGAs/s1600/Bhuj1_TI.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Aina Mahal Museum</h2>
+              <p>
+                The Aina Mahal was built by Rao Lakhpatji (r. 1741–1760) in
+                around 1750.The chief architect and designer of the palace was
+                Ram Singh Malam, who lived in Europe for 18 years and mastered
+                several European craft and architecture skills.The construction
+                costed 80 lakh (8 million) koris or about ₹20 lakh (2 million);
+                equalling three years of the state revenue in that period.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.iubjuNF4Pj2JZdxXnWg3DwHaFA&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Darbar Hall Museum</h2>
+              <p>
+                The Darbar Hall Museum, Junagadh actually has been a courthouse
+                in the times of the Nawabs - where all court cases used to be
+                put up to be fought for or against. Part of the old city palace,
+                the court was later converted into a museum, preserving the
+                tokens and mementos which speaks of the grandeur and glory of
+                the past ages of Nawabs and Sultans.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://www.gosahin.com/go/p/h/1551643451_watson-museum5.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Watson Museum</h2>
+              <p>
+                The museum is set up in the Queen Victoria memorial institute
+                buildings located in Jubilee Garden, Rajkot. The museum was
+                named in fond memory of Colonel John Watson in 1888 who was a
+                British political agent of Kathiawar Agency from 1881 to 1889.
+                Watson Museum is the second most important museum in Gujarat,
+                after the Museum of Baroda and is the oldest museum in
+                Saurashtra (region). Colonel Watson was fond of history and
+                archaeology and used to collect information on Rajkot. Most of
+                his collections and other artifacts are preserved here.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Kutch_Museum_Bhuj_Kutch_Gujarat_India.jpg/375px-Kutch_Museum_Bhuj_Kutch_Gujarat_India.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Kutch Museum</h2>
+              <p>
+                Kutch museum was initially established as a part of the School
+                of Arts established by Khengarji III, the Maharao of Cutch
+                State. It was founded on 1 July 1877. At the time of Maharao
+                Khengarji III's marriage on 19 February 1884 many new items were
+                received and for exhibition of which, a need for new building
+                was necessitated. As such, on 14 November 1884, the foundation
+                stone for the present museum building was laid by the Governor
+                of Bombay, Sir James Fergusson and named Fergusson Museum after
+                him by Maharao of Cutch.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.8LkZHvmaYRdOGIcpjme_tgHaCs&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Auto World Vintage Car Museum</h2>
+              <p>
+                Tourists would be amazed with the priceless collection of the
+                valuable cars ranging from the 1906 Minerva to 1954 Ford. Car
+                enthusiasts would be delighted viewing the diverse range of the
+                four wheeled vehicles. More than a hundred cars are displayed
+                built by well known coach builders including Hopper, Barker,
+                Gurney-Nutting, Fleetwood and Lebaron.Well maintained by Vintage
+                and Classic Car Club of India, the museum is now managed by
+                Director Mr Nitin Dossa. People who appreciate speed and style
+                would be astounded to see the antiques. One of the arresting
+                displays is the 1923 Rolls 20 HP with a typical shooting brake
+                body by Barker among the best collection of Rolls Royce.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.XLOnw8OafCN14r32bEJ_aAHaE6&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Veechar Utensil Museum</h2>
+              <p>
+                The museum found its way into Vishalla three years after
+                Vishalla was itself started, on 27 April 1981. Vechaar is the
+                only museum of its kind in the world, displaying such a precious
+                collection of utensils. A walk around the hut-like museum makes
+                one's heart skip a beat, marveling at the inimitable beauty of
+                these utensils of old. These utensils have been handed down
+                through the changing seasons and times, over the years. They
+                speak of the unmatched art and genius of humankind during the
+                days of old when people did not have the modern facilities of
+                our times. The designer could not let our rich heritage pass
+                with these vessels being lost in the fire kilns! He was
+                determined to preserve them, and today, his dream is a reality
+                in the form of Vechaar.
+              </p></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- footer  -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="#">Virtual Tour</a></li>
+          <li><a href="#">Exibitions</a></li>
+          <li><a href="#">Buying and Selling</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2024 Company Name. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="westWeb.js"></script>
+</html>

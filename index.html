@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahoi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link
+      rel="shortcut icon"
+      href="images/Default Images/WhatsApp Image 2024-03-14 at 04.46.04_3b52f66a.jpg"
+      type="image/x-icon"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      img {
+        vertical-align: middle;
+      }
+
+      /* Position the image container (needed to position the left and right arrows) */
+      .container {
+        position: relative;
+      }
+
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+
+      /* Add a pointer when hovering over the thumbnail images */
+      .cursor {
+        cursor: pointer;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #000000;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* Container for image text */
+      .caption-container {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+        color: white;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Six columns side by side */
+      .column {
+        float: left;
+        width: 16.66%;
+      }
+      /* Scroll Bar */
+    </style>
+  </head>
+  <body>
+    <nav id="navbar-main">
+      <ul id="ul-main">
+        <li id="main-logo">
+          <a href=""
+            ><img
+              src="/images/Default Images/WhatsApp_Image_2024-03-14_at_01.45.25_816acbda-removebg-preview.png"
+              alt="main-logo-Ahoi"
+              style="height: 10vh; width: 200px"
+          /></a>
+        </li>
+        <li id="ul-main-li-2" class="NavlinkHover">
+          <a href="/index.html">Home</a>
+        </li>
+        <li id="ul-main-li-3" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">
+              <a
+                href="/SideWebsites/Exhibition wepage/Exhibitions.html"
+                target="_blank"
+                >Exhibitions</a
+              >
+            </button>
+            <!-- <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div> -->
+          </div>
+        </li>
+        <li id="ul-main-li-4" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">
+              <a href="/SideWebsites/Collection/Collection.html" target="_blank"
+                >Collection</a
+              >
+            </button>
+            <div class="dropdown-content">
+              <a href="/SideWebsites/north/North.html" target="_blank"
+                >North Museums</a
+              >
+              <a href="/SideWebsites/South museum/SoutWeb.html" target="_blank"
+                >South Museums</a
+              >
+              <a
+                href="/SideWebsites/East Museum/EastMuseum.html"
+                target="_blank"
+                >East Museums</a
+              >
+              <a href="/SideWebsites/west museum/westWeb.html" target="_blank"
+                >West Museums</a
+              >
+            </div>
+          </div>
+        </li>
+        <!-- <li id="ul-main-li-5" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">Events</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </li> -->
+        <li id="ul-main-li-6" class="NavlinkHover">
+          <a href="#" onclick="Coming_Soon()">Virtual Tour</a>
+        </li>
+        <li id="ul-main-li-7" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">Shop</button>
+            <div class="dropdown-content">
+              <a href="/SideWebsites/shop ahoi/shop.html" target="_blank"
+                >Official Art For Sale
+              </a>
+              <!-- <a href="#">Listed Art & Scuptures</a> -->
+              <a href="/SideWebsites/ContactUs.html">List Your Art </a>
+            </div>
+          </div>
+        </li>
+        <li id="ul-main-li-8" class="NavlinkHover">
+          <a href="/SideWebsites/Contactus.html" target="_blank">Contact Us</a>
+        </li>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search.."
+          class="search_bar"
+        />
+        <label class="switch">
+          <input type="checkbox" onclick="ThemeToggle()" />
+          <span class="slider round"> </span>
+        </label>
+      </ul>
+    </nav>
+
+    <!-- Nav Bar ends -->
+
+    <!-- Slide Image Gallery -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="images/Slidebarimg/art.jpg"
+            style="height: 500px; width: 900px; object-fit: cover"
+            id="carousel-opacity"
+            class="d-block w-100 carousel-img"
+            alt="Indian Art"
+          />
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <h5 id="carousel-caption-1">Art & Culture</h5>
+            <p id="carousel-caption-2">
+              Witness The Beauty of Indian Art & Culture
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/Slidebarimg/Designer (1).jpeg.jpg"
+            style="height: 500px; width: 900px; object-fit: cover"
+            id="carousel-opacity"
+            class="d-block w-100"
+            alt="Indian Museum"
+          />
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <h5 id="carousel-caption-1">India's Top Museums & Art Galleries</h5>
+            <p id="carousel-caption-2">
+              Visit the India's Top Art Galleries &<br />
+              Most Iconic Museums
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="images/Slidebarimg/ajmer-gov-museum.jpg"
+            style="height: 500px; width: 900px; object-fit: cover"
+            id="carousel-opacity"
+            class="d-block w-100"
+            alt="Indian Sculptures"
+          />
+          <div class="carousel-caption d-none d-md-block fw-bold fs-4">
+            <h5 id="carousel-caption-1">Ancient Sculptures and Monuments</h5>
+            <p id="carousel-caption-2">Discover Sculptures Unique to India</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <hr id="first-hr" />
+    <!-- Slide Image Gallery End -->
+    <!-- Body Content -->
+    <!-- flexbox1 -->
+    <div class="FlexBox1">
+      <h1>Discover India's Most Authentic Art Galleries</h1>
+      <div class="mainContainer" id="slides1">
+        <div class="slideshow-container-left">
+          <hr />
+          <div class="mySlides-left fade">
+            <div class="numbertext">1 / 4</div>
+            <img
+              src="/images/sliderimg2/horizontalimg4avif.avif"
+              style="width: 100%"
+              class="SideImg"
+            />
+            <div class="text">Albert Hall Museum Jaipur</div>
+          </div>
+
+          <div class="mySlides-left fade">
+            <div class="numbertext">2 / 4</div>
+            <img
+              src="/images/sliderimg2/horizontalimg2.webp"
+              style="width: 100%"
+              class="SideImg"
+            />
+            <div class="text">National Gallery Of Modern Art Delhi</div>
+          </div>
+
+          <div class="mySlides-left fade">
+            <div class="numbertext">3 / 4</div>
+            <img
+              src="/images/sliderimg2/Partition-Museum-Amritsar-1024x576 (1).jpg"
+              style="width: 100%"
+              class="SideImg"
+            />
+            <div class="text">Partition Museum Amritsar</div>
+          </div>
+
+          <div class="mySlides-left fade">
+            <div class="numbertext">4 / 4</div>
+            <img
+              src="/images/sliderimg2/Sarnath-Museum-Varanasi (1).jpg"
+              style="width: 100%"
+              class="SideImg"
+            />
+            <div class="text">Sarnath Museum Varanasi</div>
+          </div>
+
+          <a class="prev" onclick="nextSlides(-1)">❮</a>
+          <a class="next" onclick="nextSlides(1)">❯</a>
+          <div style="text-align: center; margin-top: 20px">
+            <span class="WeirdAndRound" onclick="currentSlideLeft(0)"></span>
+            <span class="WeirdAndRound" onclick="currentSlideLeft(1)"></span>
+            <span class="WeirdAndRound" onclick="currentSlideLeft(2)"></span>
+            <span class="WeirdAndRound" onclick="currentSlideLeft(3)"></span>
+          </div>
+          <hr />
+        </div>
+        <div class="sideElements">
+          <hr />
+          <!-- MAIN (Center website) -->
+          <div class="RightMain">
+            <!-- Portfolio Gallery Grid -->
+            <div class="RowRight">
+              <div class="columnRight">
+                <div class="contentRight">
+                  <img
+                    src="/images/sliderimg2/indian_museum (1).jpg"
+                    alt="Museum-1"
+                    style="width: 100%"
+                  />
+                  <h3>The Indian Museum</h3>
+                  <p>
+                    the Indian Museum is the oldest and the largest museum in
+                    India. Established in 1814 under the aegis of the celebrated
+                    Danish botanist Dr. Nathaniel Wallich, the museum boasts of
+                    over 35 galleries in with pieces broadly classified under
+                    archaeology, anthropology, art, economic botany,
+                    zoology and geology.
+                  </p>
+                </div>
+              </div>
+              <div class="columnRight">
+                <div class="contentRight">
+                  <img
+                    src="/images/sliderimg2/govt_museum (1).jpg"
+                    alt="Museum-2"
+                    style="width: 100%"
+                  />
+                  <h3>The Government Museum</h3>
+                  <p>
+                    The Government Museum in Chennai is the second oldest museum
+                    in India and spread over a lavish 16.25 acres of land also
+                    houses the colossal Museum Theatre, The exhibits in the
+                    museum are extremely priceless and rare, as is the heritage
+                    of the museum itself. Palm leaf manuscripts, Raja Ravi
+                    Varma's famous paintings, and the largest antique Roman
+                    collection outside Europe
+                  </p>
+                </div>
+              </div>
+              <div class="columnRight">
+                <div class="contentRight">
+                  <img
+                    src="/images/sliderimg2/rail_museum (1).jpg"
+                    alt="Museum-3"
+                    style="width: 100%"
+                  />
+                  <h3>National Rail Museum</h3>
+                  <p>
+                    the National Rail Museum in the capital of the country is
+                    one the most invigorating experiences. With a toy train
+                    taking rounds of the 10 acre wide spread museum, with both
+                    indoor and outdoor exhibits, this museum in India has
+                    something to offer to visitors of all ages.
+                  </p>
+                </div>
+              </div>
+              <div class="columnRight">
+                <div class="contentRight">
+                  <img
+                    src="/images/sliderimg2/Sulabh-International-Museum-Of-Toilets-Delhi (1).jpg"
+                    alt="Museum-4"
+                    style="width: 100%"
+                  />
+                  <h3>Sulabh International Museum Of Toilets Delhi</h3>
+                  <p>
+                    This is an interesting museum, which holds exhibits of
+                    toilets. Starting from the ancient forms of toilets to the
+                    modern ones, this museum holds several vintage and novelty
+                    toilets from around the world. You can spot toilets from 50
+                    different countries and even some weird models too.
+                  </p>
+                </div>
+              </div>
+              <!-- END GRID -->
+            </div>
+
+            <div class="contentRight">
+              <img
+                src="/images/sliderimg2/national_museum (1).jpg"
+                alt="Museum-5"
+                style="width: 100%"
+              />
+              <h3>The National Museum</h3>
+              <p>
+                The National Museum in Delhi is one of The most iconic museums
+                in India and one of its kind, housing over 200,000 artefacts
+                ranging from the pre-historic to the modern age. In fact, not
+                just spanning over these eras, the collection at the museum is
+                spread over a huge number of civilizations and religions.
+              </p>
+              <p>
+                In a very rare feature among all the Indian museums, the
+                National Museum houses the National Museum Institute of History
+                of Arts, Conservation and Museology, which offers deemed Masters
+                and Doctoral courses in History of Art,
+                Conservation and Museology.
+              </p>
+            </div>
+            <hr />
+            <!-- END MAIN -->
+          </div>
+        </div>
+      </div>
+
+      <h2>Top Art Galleries & Museums</h2>
+    </div>
+    <br />
+    <!-- FlexBox2  -->
+    <div class="container" id="slides2">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img
+          src="images/Slidebarimg/Nalini-Malani-Twice-Upon-A-Time (1).webp"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img
+          src="images/Slideshow2images/ajmer-gov-museum.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/Slideshow2images/designer.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img
+          src="images/Slideshow2images/science-city.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img
+          src="images/Slideshow2images/delhi-art-gallery.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img
+          src="images/Slideshow2images/subhir-raha-art-museum.jpg"
+          style="width: 100%"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p class="captionHolder"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="/images/Slidebarimg/Nalini-Malani-Twice-Upon-A-Time (1).webp "
+            style="width: 150px; height: 100px"
+            onclick="showSlides(0)"
+            alt="Kiran Nadar Museum of Art"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images//Slideshow2images/ajmer-gov-museum.jpg"
+            style="width: 150px; height: 100px"
+            onclick="showSlides(1)"
+            alt="Ajmer Goverment Museum"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images//Slideshow2images/designer.jpg"
+            style="width: 150px; height: 100px"
+            onclick="showSlides(2)"
+            alt="Pushpa Burjal Art Museum"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images//Slideshow2images/science-city.jpg"
+            style="width: 150px; height: 100px"
+            onclick="showSlides(3)"
+            alt="Science City"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images//Slideshow2images/delhi-art-gallery.jpg"
+            style="width: 150px; height: 100px"
+            onclick="showSlides(4)"
+            alt="Delhi Art Museum"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo cursor"
+            src="images//Slideshow2images/subhir-raha-art-museum.jpg"
+            style="width: 150px; height: 100px"
+            onclick="showSlides(5)"
+            alt="Subhir Raha Art Museum"
+          />
+        </div>
+      </div>
+    </div>
+    <hr />
+    <h1
+      style="
+        display: flex;
+        justify-content: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    >
+      Pick By Your Preference
+    </h1>
+    <div class="Grid">
+      <div class="columnGrid">
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/bettermuseum.webp"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slideshow2images/designer.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/art.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/museum.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img
+            class="GridImages"
+            src="images//Slidebarimg/Indian_Sculpture.png"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/sculpture.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img
+            class="GridImages"
+            src="images//Slideshow2images/science-city.jpg"
+        /></a>
+      </div>
+      <div class="columnGrid">
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/museum.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img
+            class="GridImages"
+            src="images//Slidebarimg/Indian_Sculpture.png"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/bettermuseum.webp"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slideshow2images/designer.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/art.jpg"
+        /></a>
+
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/sculpture.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img
+            class="GridImages"
+            src="images//Slideshow2images/science-city.jpg"
+        /></a>
+      </div>
+      <div class="columnGrid">
+        <a href="" class="columGridLink"
+          ><img
+            class="GridImages"
+            src="images//Slidebarimg/Indian_Sculpture.png"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/sculpture.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img
+            class="GridImages"
+            src="images//Slideshow2images/science-city.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/art.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/bettermuseum.webp"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slideshow2images/designer.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/museum.jpg"
+        /></a>
+      </div>
+      <div class="columnGrid">
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/bettermuseum.webp"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/sculpture.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slideshow2images/designer.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/art.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img
+            class="GridImages"
+            src="images//Slideshow2images/science-city.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img class="GridImages" src="images//Slidebarimg/museum.jpg"
+        /></a>
+        <a href="" class="columGridLink"
+          ><img
+            class="GridImages"
+            src="images//Slidebarimg/Indian_Sculpture.png"
+        /></a>
+      </div>
+    </div>
+
+    <!-- footer-->
+    <div class="footer-basic" style="border-top: 2px solid black">
+      <footer>
+        <div class="social">
+          <a href="#"><i class="icon ion-social-instagram"></i></a
+          ><a href="#"><i class="icon ion-social-snapchat"></i></a
+          ><a href="#"><i class="icon ion-social-twitter"></i></a
+          ><a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Ahoi: Art Heaven Of India <br />© 2024</p>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
