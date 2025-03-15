@@ -9,3 +9,7 @@
 # update requirement.txt
 
 `pip freeze > requirements.txt`
+
+# to install packages from requiremnet.txt
+
+`pip install -r requirements.txt`

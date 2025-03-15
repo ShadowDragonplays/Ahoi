@@ -23,7 +23,7 @@ def print_math_response(response):
 
 
 # MODEL = "deepseek-coder-v2:latest"
-MODEL = "starcoder2:3b"
+MODEL = "qwen2.5max:latest"
 client = OpenAI(
     base_url='http://localhost:11434/v1',
     api_key='ollama',  # required, but unused
