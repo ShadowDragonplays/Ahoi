@@ -1,0 +1,661 @@
+<html>
+  <head>
+    <!--Font Awesome CDN-->
+    <link
+      rel="shortcut icon"
+      href="/images/defaultImages/mainImg.jpg"
+      type="image/x-icon"
+    />
+    <title>Ahoi:Museums In South</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="South.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- <script src="script.js" defer></script> -->
+  </head>
+  <body>
+    <nav id="navbar-main">
+      <ul id="ul-main">
+        <li id="main-logo">
+          <a href=""
+            ><img
+              src="/images/defaultImages/mainLogo.png"
+              alt="main-logo-Ahoi"
+              style="height: 10vh; width: 200px"
+          /></a>
+        </li>
+        <li id="ul-main-li-2" class="NavlinkHover">
+          <a href="/index.html">Home</a>
+        </li>
+        <li id="ul-main-li-3" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">
+              <a
+                href="/slideAssets/ExhibitionWepage/Exhibitions.html"
+                target="_blank"
+                >Exhibitions</a
+              >
+            </button>
+            <!-- <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div> -->
+          </div>
+        </li>
+        <li id="ul-main-li-4" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">
+              <a href="/slideAssets/Collection/Collection.html" target="_blank"
+                >Collection</a
+              >
+            </button>
+            <div class="dropdown-content">
+              <a href="/slideAssets/north/North.html" target="_blank"
+                >North Museums</a
+              >
+              <a href="/slideAssets/SouthMuseum/SoutWeb.html" target="_self"
+                >South Museums</a
+              >
+              <a href="/slideAssets/EastMuseum/EastMuseum.html" target="_blank"
+                >East Museums</a
+              >
+              <a href="/slideAssets/westmuseum/westWeb.html" target="_blank"
+                >West Museums</a
+              >
+            </div>
+          </div>
+        </li>
+        <!-- <li id="ul-main-li-5" class="NavlinkHover">
+            <div class="dropdown-nav-main">
+              <button class="dropbtn">Events</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </li> -->
+        <li id="ul-main-li-6" class="NavlinkHover">
+          <a href="#" onclick="Coming_Soon()">Virtual Tour</a>
+        </li>
+        <li id="ul-main-li-7" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">Shop</button>
+            <div class="dropdown-content">
+              <a href="/slideAssets/shop ahoi/shop.html" target="_blank"
+                >Official Art For Sale
+              </a>
+              <!-- <a href="#">Listed Art & Scuptures</a> -->
+              <a href="">List Your Art </a>
+            </div>
+          </div>
+        </li>
+        <li id="ul-main-li-8" class="NavlinkHover">
+          <a href="/slideAssets/Contactus.html" target="_blank">Contact Us</a>
+        </li>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search.."
+          class="search_bar"
+        />
+        <label class="switch">
+          <input type="checkbox" onclick="ThemeToggle()" />
+          <span class="slider round"> </span>
+        </label>
+      </ul>
+    </nav>
+
+    <!-- Rest of your code goes here -->
+    <div class="container">
+      <div class="slide">
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg)"
+        >
+          <div class="content">
+            <div class="name">Art Gallery</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg)"
+        >
+          <div class="content">
+            <div class="name">Museums</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg)"
+        >
+          <div class="content">
+            <div class="name">North India</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg)"
+        >
+          <div class="content">
+            <div class="name">East India</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg)"
+        >
+          <div class="content">
+            <div class="name">West India</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+            </div>
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg)"
+        >
+          <div class="content">
+            <div class="name">South India</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+            </div>
+            <button>See More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- part 2  -->
+    <div id="region">
+      <h1>Explore Art gallery and Museums of South India</h1>
+      <!-- <hr> -->
+      <div id="flip-card">
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://www.holidify.com/images/compressed/4908.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span>
+              <h2>Chaitanya Jyoti Museum</h2>
+              <p>
+                Opened as a tribute to Sathya Sai Baba, the Chaitanya Jyoti
+                Museum in Puttaparthi is a museum that stands for the type of
+                religious harmony, charity and universal kinship that was
+                propounded by Sathya Sai Baba. The museum is dedicated to the
+                life and teachings of the guru who was considered to be an
+                avatar of Shirdi Sai Baba. The architecture of the museum
+                incorporates elements from the Shikhara style and that of the
+                Chinese Pagodas. The museum is housed in a building with seven
+                levels and displays the common ideas that underlie all world
+                religions. It has an archive of religious heritage from across
+                the globe that includes replicas, idols and objects that project
+                the credo of all major religions.
+              </p>
+            </span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.etjm6e4gPE9Cpipr7-SkDAHaFj&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Shree Venkateshvara Museum</h2>
+              <p>
+                The Hall of Antiques was first established in 1980 in Thousand
+                Piller mandapam opposite to the main shrine in Tirumala . Now
+                the S.V. Museum is situated in a sprawling building with an area
+                of 1.25 lakh sq.ft opposite to Vaikuntham Queue Complex in
+                kaleidoscopic environ of Tirumala surrounded by beautiful
+                gardens and it is a rejoicing place for visiting pilgrims.his
+                museum is an epitome of Traditions of Tirumala, Vaishnavism and
+                Hindu culture. It houses more than 6000 items of historical
+                interest ranging in date from very early period to the present.
+                The collections are spread over ten sections ranging from
+                archaeology to contemporary items.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.explicit.bing.net/th?id=OIP.S1lGS9IonwlqB6Zq-ESSOgHaFH&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Araku TribalMuseum</h2>
+              <p>
+                Located in Araku Valley, near Padmapura Botanical Gardens, the
+                TribalMuseum was established in 1996 by the Andhra Pradesh
+                Tourism Development Corporation. It was set up with the aim of
+                conserving and displaying the tribal culture of the region.
+                Various indigenous ways of living are exhibited in the museum
+                through the display of objects of daily use such as jewellery,
+                hunting tools and kitchen tools. Scenes of quotidian life are
+                staged through the arrangement and construction of life-sized
+                statues.The museum itself is fashioned out of mud and metal. The
+                museum also has a Tribal Art and Crafts Centre which holds
+                workshops and seminars promoting tribal and folk art.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.XbN-lof7vRxm93kAOG2GlAHaEj&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Sea Harrier Museum</h2>
+              <p>
+                Andhra Pradesh Chief Minister Y.S. Jagan Mohan Reddy will
+                inaugurate the Sea Harrier Museum on Beach Road and Indoor
+                Sports Complex in MVP Colony of Visakhapatnam on May 11
+                (Thursday).The Visakhapatnam Metropolitan Region Development
+                Authority (VMRDA) initiated the Sea Harrier Museum project in
+                2020 after the authorities concerned took over the Rajiv Smrithi
+                Bhavan for the purpose.The museum will feature Sea Harrier, a
+                fighter plane which was decommissioned by the Indian Navy. It
+                has been brought from Goa. All the artefacts in the museum will
+                give a detailed presentation of the history of this fighter
+                plane to the visitors.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiEJvKUwTdB7jhHqu1pLus7l1HJNXDpM6KcouxJOzIUHVfaSXsxss16Gl6zPjIq4OVXtWRippqKjPpqH86cu4mECEZiMehTz51xd-zNLY8JpHEMTu3aciXQqSKuLStZ7OnN1BJZti5itPi_Uf-sWVCUDYly-E7U-y8cEjpK93_lkRqd27pxw8WWfVONQ/s1619/Mysuru_SandSculptureMuseum%20(15).jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Mysore Sand Sculpture Museum</h2>
+              <p>
+                The museum was inaugurated in 2014, with 115 truckloads of
+                construction sand being used to create 150 sculptures. The
+                sculptures covered up to 16 different themes, largely dealing
+                with Mysore's cultural heritage, wildlife and religion (mainly
+                Hinduism, Islam and Christianity). Among the subjects of the
+                sculptures displayed at the museum were Ganesha, Mysore Dasara,
+                Santa Claus, Christmas tree, zodiac wheel, Islamic culture,
+                Disneyland, marine life, Laughing Buddha, Chamundeshwari,
+                Gitopadesha and Cauvery River.In 2017, a three-dimensional
+                selfie gallery was introduced at the museum.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.N-h4ngz15J7ub1UdWhVnAQHaE8&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>The Heritage Center & Aerospace Museum</h2>
+              <p>
+                HAL Aerospace Museum is India's first aerospace museum[1]
+                located at Hindustan Aeronautics Limited premises, in Bangalore.
+                Established in 2001, the Museum is part of the HAL Heritage
+                Centre and Aero Space Museum, and showcases the growth of the
+                Indian aviation industry and HAL for six decades.[2][3][4][5]
+                The museum houses displays of various aircraft and helicopters,
+                Aircraft engine models, Flight simulators, a mock Air Traffic
+                Control Tower and exhibit of Indian aviation history. The Museum
+                is maintained by HAL (one of Asia's largest Aerospace
+                companies).
+              </p></span
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.R3AWKMbNoa0GNuWR1nrWGQHaFi&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Warship Museum</h2>
+              <p>
+                INS Chapal was an active warship with Indian navy and the star
+                of naval warfare during the 1971 Indo-Pak war. INS Chapal is now
+                decommissioned, converted into a museum and attracts visitors in
+                the city of Karwar, North Canara.Visitors can experience the
+                interiors of INS Chapal warship; barracks used by staff, engine
+                rooms, external guns, uniforms of the servicemen and gain an
+                insight about life at sea. A 15 minutes video documentary will
+                be shown explaining Indian Navy’s role in safeguarding India’s
+                shores.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://smu.edu.in/content/dam/manipal/mu/kmc-manipal/images/galleryImage/KMCMpltrial/m8.JPG"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Museum of Anatomy & Pathology</h2>
+              <p>
+                Dr SS Godbole, the first Anatomy Professor of Kasturba Medical
+                College, had a passion for preservation. His techniques of
+                careful dissection, processing and mounting of anatomical
+                specimens are followed even today. It was under his watch that
+                the museum opened its doors to the public in 1954, with over 650
+                specimens from his own collection.Billed as one of the largest
+                in Asia, the museum boasts of over 3,000 specimens and samples
+                of things anatomical, including the skulls of an elephant and a
+                whale, and the long skeleton of a King Cobra.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.JiNq6M2RSF32VidvPhzpJgHaEF&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Indian Music Experience Museum</h2>
+              <p>
+                A nation whose dance and music tradition dates back to over
+                2,000 years deserves this and more. There is, of course, the
+                Sangeet Natak Academy, but it focuses more on performances —
+                this was the thought that M R Jaishankar, the chairman of
+                Brigade Group of Real Estate Developers, found himself thinking.
+                But India needed something that also showcased the rich history
+                of music, he realised while visiting the Grammy museum in Los
+                Angeles. Roughly ten years later, his dream came true, and the
+                IME was open to the public.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.psT9sObo54sSq3FEG-lNZwHaEK&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Sea Shell Museum</h2>
+              <p>
+                Kalashree Seashell Museum is a museum in Mysore, India, which
+                features sculptures made of seashell and conch. At the time of
+                its inauguration in 2017, the museum exhibited 130 works of
+                Radha Mallappa, including the world's tallest seashell sculpture
+                of Ganesha (11 feet). Among other prominent works on display at
+                the museum are a 10-foot tall Taj Mahal replica, a 12-foot tall
+                idol of Shiva and a 13-foot tall model of St. Philomena's
+                Church.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.fGAFJba1c1OuhMTZB4qjPQHaE6&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Thanjavur Royal Palace and Art Gallery</h2>
+              <p>
+                The royal objects that are on display in the museum include
+                royal clothing, headgear and hunting weapons. On the upper floor
+                is a skeleton of a 92-feet whale that washed ashore near
+                Tranquebar in 1955. Thanjavur Palace has the famous Saraswathi
+                Mahal library, an art gallery and the Royal Museum with an
+                interesting collection of artifacts, paintings, books and other
+                memorabilia. The paintings in the Darbar Hall retell the stories
+                from the epic Ramayana. The walls and ceilings are covered with
+                detailed stucco figures of gods and goddesses.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.aX9Mmlff4m561Uoz0tRH2gAAAA&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Dakshina Chitra Museum</h2>
+              <p>
+                DakshinaChitra is an exciting cross cultural living museum of
+                art, architecture, lifestyles, crafts and performing arts of
+                South India. The main mission is to exhibit, promote and
+                preserve aspects of the broader, more inclusive cultures of the
+                states and to bring these arts to the public in a participative,
+                enjoyable and engaging way. DakshinaChitra Heritage Museum , a
+                project of Madras Craft Foundation an NGO was opened to the
+                public on December 14th 1996. The Museum is located overlooking
+                the Bay of Bengal, at Muttukadu, twenty five kilometers south of
+                Central Chennai, on the East Coast Road to Mamallapuram, Tamil
+                Nadu, India.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP._K6IOOFTbHHBv-8LyKQBCQHaEk&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Shembaganaur Museum of Natural History</h2>
+              <p>
+                The Shembaganur Museum of Natural History has separate sections
+                for anthropology, flora, fauna and handicrafts. Plant lovers
+                should not miss visiting the herbarium in the museum as it has a
+                huge garden with around 2500 species of plants. The orchidarium
+                has 300 varieties of flower plants and trees. The taxidermy of
+                more than 500 species of animals, birds, butterflies and insects
+                will be a source of delight to the tourists. The museum,
+                established in 1895, was redesigned to the present status by the
+                Spanish priest, Father E. Ugarthe. He took charge of the museum
+                in 1951.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://media-cdn.tripadvisor.com/media/photo-s/19/fd/0e/ef/caption.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Maritime Heritage Museum</h2>
+              <p>
+                The Maritime Heritage Museum is actually a very recent addition
+                to the tourist attractions of Mahabalipuram. As it’s
+                construction was started in the year 2013. And it took
+                approximately two years for the whole museum to be completed.
+                Thus, the construction got completed sometimes in 2015 . And
+                thereafter the museum opened for tourists and viewers.
+                Initially, the submarine ex – Vagli was towed from
+                Vishakhapatnam to the coast of Mamallapuram. The intention was
+                to convert it into the Maritime Heritage Museum.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.ivMBgO-MGraCyVtli0hLLgHaE7&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Geedee Car Museum</h2>
+              <p>
+                The museum was founded by GD Gopal in 2015 as a commemoration of
+                his late father, Gopalswamy Doraiswamy Naidu. During its
+                inauguration, the museum was endowed with a distinctive
+                assortment of automobiles originating from Britain, Germany,
+                Japan, France, Spain, and the United States. This collection
+                encompasses nearly 35 different brands and comprises the private
+                accumulation of G.D. Naidu Charities, which has been amassing
+                these vehicles for over four decades. Also, the museum received
+                eight cars donated by other vintage car enthusiasts.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.TybKzeURfDc2MWrwQgLLRwHaFj&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Kannan Devan Tea Museum</h2>
+              <p>
+                The tea estate is owned by Kanan Devan Hills Plantations Company
+                (P) Ltd. (KDHP) – the plantation dates back to the 1880s. The
+                museum opened on 1 April 2004. The tea museum preserves the
+                aspects on the genesis and growth of tea plantations in Kerala's
+                mountain region in the Idukki district on the Western Ghats at
+                the border to the Coimbatore district of Tamil Nadu. Tata Tea
+                opened the museum which houses curiosities, photographs and
+                machineries, depicting a turning point that contributed to
+                Idukki's flourishing tea industry. Set up at the Nallathanni
+                Estate, the museum is a tribute to its pioneers who transformed
+                Munnar into a major tea plantation centre of Kerala, from the
+                rudimentary tea roller from 1905 to a fully automated tea
+                factory
+              </p></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- footer  -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="#">Virtual Tour</a></li>
+          <li><a href="#">Exibitions</a></li>
+          <li><a href="#">Buying and Selling</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2024 Company Name. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="South.js"></script>
+</html>
