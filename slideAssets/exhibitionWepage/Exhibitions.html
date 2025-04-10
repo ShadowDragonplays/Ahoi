@@ -1,0 +1,871 @@
+<html>
+  <head>
+    <!--Font Awesome CDN-->
+    <title>Ahoi:Exhibition</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="/images/defaultImages/mainImg.jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="Exhibition.js" defer></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #eaeaea;
+        /* overflow: hidden; */
+      }
+
+      .container {
+        position: relative;
+        border-radius: 15px;
+        top: 38%;
+        left: 23%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 450px;
+        background: #f5f5f5;
+        box-shadow: 0 30px 50px #dbdbdb;
+      }
+
+      .container .slide .item {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        /* left: 40%; */
+        transform: translate(0, -50%);
+        border-radius: 10px;
+        box-shadow: 0 30px 50px #505050;
+        background-position: 50% 50%;
+        background-size: cover;
+        display: inline-block;
+        transition: 0.5s;
+      }
+
+      .slide .item:nth-child(1),
+      .slide .item:nth-child(2) {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 20px;
+        width: 120%;
+        height: 110%;
+      }
+
+      .slide .item:nth-child(3) {
+        left: 133%;
+        top: 25%;
+        border-radius: 50%;
+      }
+      .slide .item:nth-child(4) {
+        left: calc(89% + 220px);
+        top: 85%;
+        border-radius: 50%;
+      }
+      .slide .item:nth-child(5) {
+        left: calc(120% + 440px);
+        top: 25%;
+        border-radius: 50%;
+      }
+
+      /* here n = 0, 1, 2, 3,... */
+      .slide .item:nth-child(n + 6) {
+        left: calc(77% + 660px);
+        opacity: 1;
+        top: 85%;
+        border-radius: 50%;
+      }
+
+      .item .content {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        width: 300px;
+        text-align: left;
+        color: #eee;
+        transform: translate(0, -50%);
+        font-family: system-ui;
+        display: none;
+      }
+
+      .slide .item:nth-child(2) .content {
+        display: block;
+      }
+
+      .content .name {
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+        opacity: 0;
+        animation: animate 1s ease-in-out 1 forwards;
+      }
+
+      .content .des {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: animate 1s ease-in-out 0.3s 1 forwards;
+      }
+
+      .content button {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        animation: animate 1s ease-in-out 0.6s 1 forwards;
+      }
+
+      @keyframes animate {
+        from {
+          opacity: 0;
+          transform: translate(0, 100px);
+          filter: blur(33px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translate(0);
+          filter: blur(0);
+        }
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 20px;
+      }
+
+      .button button {
+        width: 40px;
+        height: 35px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        margin: 0 5px;
+        border: 1px solid #000;
+        transition: 0.3s;
+      }
+
+      .button button:hover {
+        background: #ababab;
+        color: #fff;
+      }
+
+      /* part 2  */
+
+      #region {
+        position: absolute;
+        top: 110%;
+        right: 6%;
+        width: 100%;
+        height: auto;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(33, 32, 41);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* flip cards  */
+      /* body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+} */
+
+      #flip-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 100px;
+        row-gap: 100px;
+        margin: 100px;
+        position: relative;
+        justify-content: space-around;
+        /* margin-bottom: 0px; */
+        position: relative;
+        left: 6%;
+      }
+      img {
+        width: 200px;
+        height: 300px;
+        border-radius: 2%;
+      }
+      span {
+        font-size: 12px;
+        justify-content: center;
+        align-items: center;
+      }
+      span h2 {
+        justify-content: center;
+        font-size: 25px;
+        margin-top: -40px;
+      }
+      span p {
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-small;
+      }
+      .card {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        transition: transform 1s ease;
+      }
+
+      .card:hover {
+        transform: rotateY(180deg);
+      }
+
+      .card .side {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: white;
+        border-radius: 10px;
+      }
+
+      .card .front {
+        background-color: #3498db;
+      }
+
+      .card .back {
+        background-color: #111;
+        transform: rotateY(180deg);
+      }
+
+      /* footer  */
+      footer {
+        background-color: #333;
+        position: relative;
+        margin-top: 0px;
+        top: 320%;
+        padding: 20px;
+        color: #fff;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-column {
+        width: 33.33%;
+      }
+
+      .footer-column h3 {
+        margin-bottom: 10px;
+      }
+
+      .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .footer-column a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-social {
+        display: flex;
+        justify-content: space-between;
+        width: 33.33%;
+      }
+
+      .footer-social a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .footer-copyright {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar-main">
+      <ul id="ul-main">
+        <li id="main-logo">
+          <a href=""
+            ><img
+              src="/images/defaultImages/mainLogo.png"
+              alt="main-logo-Ahoi"
+              style="height: 10vh; width: 200px"
+          /></a>
+        </li>
+        <li id="ul-main-li-2" class="NavlinkHover">
+          <a href="/index.html">Home</a>
+        </li>
+        <li id="ul-main-li-3" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">
+              <a
+                href="/slideAssets/ExhibitionWepage/Exhibitions.html"
+                target="_self"
+                >Exhibitions</a
+              >
+            </button>
+            <!-- <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div> -->
+          </div>
+        </li>
+        <li id="ul-main-li-4" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">
+              <a href="/slideAssets/Collection/Collection.html" target="_blank"
+                >Collection</a
+              >
+            </button>
+            <div class="dropdown-content">
+              <a href="/slideAssets/north/North.html" target="_blank"
+                >North Museums</a
+              >
+              <a href="/slideAssets/SouthMuseum/SoutWeb.html" target="_blank"
+                >South Museums</a
+              >
+              <a href="/slideAssets/EastMuseum/EastMuseum.html" target="_blank"
+                >East Museums</a
+              >
+              <a href="/slideAssets/westmuseum/westWeb.html" target="_blank"
+                >West Museums</a
+              >
+            </div>
+          </div>
+        </li>
+        <!-- <li id="ul-main-li-5" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">Events</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+        </li> -->
+        <li id="ul-main-li-6" class="NavlinkHover">
+          <a href="#" onclick="Coming_Soon()">Virtual Tour</a>
+        </li>
+        <li id="ul-main-li-7" class="NavlinkHover">
+          <div class="dropdown-nav-main">
+            <button class="dropbtn">Shop</button>
+            <div class="dropdown-content">
+              <a href="/slideAssets/shop ahoi/shop.html" target="_blank"
+                >Official Art For Sale
+              </a>
+              <!-- <a href="#">Listed Art & Scuptures</a> -->
+              <a href="">List Your Art </a>
+            </div>
+          </div>
+        </li>
+        <li id="ul-main-li-8" class="NavlinkHover">
+          <a href="/slideAssets/Contactus.html" target="_blank">Contact Us</a>
+        </li>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search.."
+          class="search_bar"
+        />
+        <label class="switch">
+          <input type="checkbox" onclick="ThemeToggle()" />
+          <span class="slider round"> </span>
+        </label>
+      </ul>
+    </nav>
+    <!-- Rest of your code goes here -->
+    <div class="container">
+      <div class="slide">
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg)"
+        >
+          <div class="content">
+            <div class="name">Art Gallery</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg)"
+        >
+          <div class="content">
+            <div class="name">Museums</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg)"
+        >
+          <div class="content">
+            <div class="name">North India</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg)"
+        >
+          <div class="content">
+            <div class="name">East India</div>
+            <!-- <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div> -->
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg)"
+        >
+          <div class="content">
+            <div class="name">West India</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+            </div>
+            <button>See More</button>
+          </div>
+        </div>
+        <div
+          class="item"
+          style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg)"
+        >
+          <div class="content">
+            <div class="name">South India</div>
+            <div class="des">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+            </div>
+            <button>See More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+
+    <!-- part 2  -->
+    <div id="region">
+      <h1>Exibition Page</h1>
+      <!-- <hr> -->
+      <div id="flip-card">
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://ih1.redbubble.net/image.3684462713.1056/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span>
+              <h2>Bharat-Mata</h2>
+              <p>
+                Bharat Mata is a work painted by the Indian painter
+                Abanindranath Tagore in 1905. However, the painting was first
+                painted by Bankim Chandra Chatterjee in the 1870s
+              </p>
+            </span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.gZoZlYD7rpfo0rk41rTmHwAAAA&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Days-of-glory-1952-Satish-Gujral</h2>
+              <p>
+                The work depicts helplessness but not without pride. Even in
+                such aggravation, the characters are hugely restrained in such a
+                small space that speaks of the experience that concerned
+                everyone.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://media.timeout.com/images/103166735/1024/768/image.webp"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Girl with a Pearl Earring</h2>
+              <p>
+                Johannes Vermeer’s 1665 study of a young woman is startlingly
+                real and startlingly modern, almost as if it were a photograph.
+                This gets into the debate over whether or not Vermeer employed a
+                pre-photographic device called a camera obscura to create the
+                image. Leaving that aside, the sitter is unknown, though it’s
+                been speculated that she might have been Vermeer's maid.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://i.etsystatic.com/18641759/r/il/0982d3/3854750965/il_1080xN.3854750965_7ag7.jpg"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Monet-Impression-Sunrise</h2>
+              <p>
+                Impression, Sunrise (French: Impression, soleil levant) is an
+                1872 painting by Claude Monet first shown at what would become
+                known as the "Exhibition of the Impressionists" in Paris in
+                April, 1874. The painting is credited with inspiring the name of
+                the Impressionist movement
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.e4y2aas8yeP-UmTVUA9VdwHaSJ&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Mother-and-Child-1921</h2>
+              <p>
+                Displayed in the exhibition 'Jamini Roy: Journey to the Roots
+                1887 - 1972 ' at the National Gallery of Modern Art, New Delhi
+                on the occasion of the 125th Birth Anniversary of the artist,
+                June - December 2013. 2) Jamini Roy (1887-1972) Centenary
+                Exhibition. New Delhi: National Gallery of Modern Art, 1987.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.UjZAMOjoA46iE00osqfSCgHaEK&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Rembrandt-The-Night-Watch</h2>
+              <p>
+                Militia Company of District II under the Command of Captain
+                Frans Banninck Cocq, also known as The Shooting Company of Frans
+                Banning Cocq and Willem van Ruytenburch, but commonly referred
+                to as The Night Watch, is a 1642 painting by Rembrandt van Rijn.
+                It is in the collection of the Amsterdam Museum but is
+                prominently displayed in the Rijksmuseum as the best-known
+                painting in its collection.
+              </p></span
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.-3s_ugDyhb-oOkQQLjcD3gHaFD&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Renoir-Bal-Du-Moulin-De-la-Galette</h2>
+              <p>
+                Bal du moulin de la Galette (commonly known as Dance at Le
+                moulin de la Galette) is an 1876 painting by French artist
+                Pierre-Auguste Renoir. It is housed at the Musée d'Orsay in
+                Paris and is one of Impressionism's most celebrated
+                masterpieces. The painting depicts a typical Sunday afternoon at
+                the original Moulin de la Galette in the district of Montmartre
+                in Paris.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.0fZSA_99TVnXbYSdi8SzewHaHU&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>The-kiss-Gustav-kilmt</h2>
+              <p>
+                The Kiss is an oil-on-canvas painting with added gold leaf,
+                silver and platinum by the Austrian Symbolist painter Gustav
+                Klimt. It was painted at some point in 1907 and 1908, during the
+                height of what scholars call his "Golden Period". It was
+                exhibited in 1908 under the title Liebespaar (the lovers) as
+                stated in the catalogue of the exhibition.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.8_BgQjmJcttQolCXdpYulgHaEp&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Leonid Afremov Rains's Rustle</h2>
+              <p>
+                Afremov is recognized as a self-representing artist, operating
+                exclusively online, with few exhibitions and very little outside
+                involvement from promoters and galleries. His artistic
+                philosophy rests on the idea that art is not only for elite, but
+                rather something that everyone should have the opportunity to
+                appreciate.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.aMNP8GhuHHGEvGiFqsSUMQAAAA&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Three-Girls-1935-Amrita-Sher-Gil</h2>
+              <p>
+                Three Girls is a painting by Amrita Sher-Gil, an Indian artist.
+                It was painted in 1935; the first work to be painted by Sher-Gil
+                after returning to India from Europe in 1934. Sometimes referred
+                to as Group of Three Girls, the painting won the Gold Medal at
+                the annual exhibition of the Bombay Art Society in 1937. The
+                painting was part of a batch sent to Nawab Salar Jang of
+                Hyderabad who later rejected them all.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse4.explicit.bing.net/th?id=OIP.2iEZMGX_UJ2sQSBdMyMT1wHaEo&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Van-Gogh-Starry-Night</h2>
+              <p>
+                The Starry Night (Dutch: De sterrennacht) is an oil-on-canvas
+                painting by the Dutch Post-Impressionist painter Vincent van
+                Gogh painted in June 1889. It depicts the view from the
+                east-facing window of his asylum room at Saint-Rémy-de-Provence,
+                just before sunrise, with the addition of an imaginary
+                village.It has been in the permanent collection of the Museum of
+                Modern Art in New York City since 1941, acquired through the
+                Lillie P. Bliss Bequest. Widely regarded as Van Gogh's magnum
+                opus.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.avrfkhuEwkjYIBc4F8_SbwHaJu&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Arnolfini-Portrait</h2>
+              <p>
+                The Arnolfini Portrait (or The Arnolfini Wedding, The Arnolfini
+                Marriage, the Portrait of Giovanni Arnolfini and his Wife, or
+                other titles) is a 1434 oil painting on oak panel by the Early
+                Netherlandish painter Jan van Eyck. It forms a full-length
+                double portrait, believed to depict the Italian merchant
+                Giovanni di Nicolao Arnolfini and his wife, presumably in their
+                residence at the Flemish city of Bruges.
+              </p></span
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.UNl2T3ThOMNI3exIHeJvpwHaJW&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Coming Soon.....</h2>
+              <p></p
+            ></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.UNl2T3ThOMNI3exIHeJvpwHaJW&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Coming Soon.....</h2>
+              <p></p
+            ></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.UNl2T3ThOMNI3exIHeJvpwHaJW&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Coming Soon.....</h2>
+              <p></p
+            ></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="side front">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.UNl2T3ThOMNI3exIHeJvpwHaJW&pid=Api&P=0&h=220"
+              alt=""
+            />
+          </div>
+          <div class="side back">
+            <span
+              ><h2>Coming Soon.....</h2>
+              <p></p
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- footer  -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="#">Virtual Tour</a></li>
+          <li>
+            <a href="/slideAssets/ExhibitionWepage/Exhibitions.html"
+              >Exibitions</a
+            >
+          </li>
+          <li><a href="/slideAssets/Shop.html">Buying and Selling</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2024 Company Name. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- <script src="/js/main.js"></script> -->
+</html>
